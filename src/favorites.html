@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites - UIUC Library Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+    <header>
+        <div class="hamburger-container">
+            <div class="hamburger-menu" id="hamburger-menu">
+                ☰
+            </div>
+        </div>
+    </header>
+    <div id="menu" class="menu hidden">
+        <div class="close-menu" id="close-menu">
+            ✖
+        </div>
+        <div id="user-info">
+            <img id="user-pic" src="default-profile.png" alt="User Picture">
+            <p id="user-email">Guest</p>
+        </div>
+        <ul>
+            <li><button id="home-button" class="menu-button">Home</button></li>
+            <li><button id="favorites-button" class="menu-button">Favorites</button></li>
+            <li><button id="auth-link" class="menu-button">Log in</button></li>
+        </ul>
+    </div>
+    <main>
+        <h1 class="favorites-title">Favorite Libraries</h1>
+        <ul id="favorites-list">
+            <!-- Favorite libraries will be listed here -->
+        </ul>
+        <!-- Add these two lines for the search functionality -->
+        <div id="search-results"></div>
+        <input type="text" id="search-bar" placeholder="Search for a library...">
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
